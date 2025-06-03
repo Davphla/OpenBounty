@@ -142,19 +142,19 @@ graph LR
 - **Niche skills**: Less effective than targeted freelancer recruitment
 
 ## When to use Bounties ?
-#### ⭐ For Funder
+### ⭐ For Funder
 - Scope is **clear** & **achievable** (1-3 week tasks)
 - Seeking specialized skills for **non-core features**
 - Budget certainty outweighs timeline flexibility
 - Funds released only for verified working solutions
 
-#### 👨‍💻 For Developper
+### 👨‍💻 For Developper
 - Be rewarded for your Open Source Work in your **Free Time**
 - Build a **Reputation** with contributions (Git/NFTs)
 - Compete on skill, **not location**
 - Access global opportunities with no interviews
 
-#### 🤵‍♂️ For Maintainer 
+### 🤵‍♂️ For Maintainer 
 - Project benefits from new vetted contributions
 - Quality control is enforced (verified before merge)
 - Earn sustainable funding (percentage of bounties)
