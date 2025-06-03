@@ -1,15 +1,15 @@
-# 🪙 vGrant - Fund-on-Merge Crypto Bounty System
+# 🪙 OpenBounty - Fund-on-Merge Crypto Bounty System
 
 ### [ETHGlobal Prague 2025](https://ethglobal.com/events/prague) Submission
 
 [<img src="images/ETHGlobal.png" alt="ETHGlobal PRAGUE" width="600"/>](https://ethglobal.com/events/prague)
 
-> **Grants with autonomous, trustless payouts**  
+> **Bounty with autonomous, trustless payouts**  
 Zero approvals · PR theft protection · First-merge-wins mechanics
 
 ---
 
-**vGrant** is a decentralized grant platform that enforces **`Fund on Merge`** consensus (See below), automating crypto payments to developers upon first valid code integration while eliminating payment delays, manual approvals, and PR theft through zero-knowledge verification.
+**OpeenBounty** is a decentralized bounty platform that enforces **`Fund on Merge`** consensus (See below), automating crypto payments to developers upon first valid code integration while eliminating payment delays, manual approvals, and PR theft through zero-knowledge verification.
 
 ### Fund on Merge Concensus
 ```mermaid
@@ -17,7 +17,7 @@ graph LR
     F[💸 Funder]
     D[👨‍💻 Developer]
 
-    F -->|1 - Fund Grant| C[📜 Smart Contract]
+    F -->|1 - Fund bounty| C[📜 Smart Contract]
     D -->|2 - Submit PR| G[🐙 Git]
     G -->|3 - First Merge| C
     C -->|4 - Auto-Payout| D
@@ -32,37 +32,37 @@ graph LR
 ## User Story
 **Alice** 👩‍💼 needs a **Blender** feature her team can't build. She:
 1. Creates GitHub issue [#1234]()
-2. Highlight by funding [**USDC**](https://coinmarketcap.com/currencies/usd-coin/) grant (Vault escrow) with deadline
+2. Highlight by funding [**USDC**](https://coinmarketcap.com/currencies/usd-coin/) bounty (Vault escrow) with deadline
 
 **Bob** 👨‍💻 wants paid open source work. He:
-1. Finds **Alice**'s issue via grant board
+1. Finds **Alice**'s issue via bounty board
 2. Submit a solution via **Pull-Request** (Code + tests + docs).
 
 **Maintainer** 🤵‍♂️:
 1. Reviews **Bob**'s Pull-Request against standard
 2. Merges on approval → **auto-releases payment**
-3. Receives review fee (5-15% of grant) → funds project treasury
+3. Receives review fee (5-15% of bounty) → funds project treasury
 
-## 🚀 How VGrant Works
+## 🚀 How Vbounty Works
 
 ### ⭐ Funder Journey
-A **Funder** creates grant for desired features:
+A **Funder** creates bounty for desired features:
 
 ```mermaid
 graph LR
-    A[💸 1. Create Grant] --> B[Define Specs & Deadline]
+    A[💸 1. Create bounty] --> B[Define Specs & Deadline]
     B --> C[🔒 2. Lock USDC in Escrow]
-    C --> D[🔄 3. Open Grant]
+    C --> D[🔄 3. Open bounty]
     D --> E{Resolution}
     E -->|First Valid Merge| F[🟢 4a. Auto-Payout]
     E -->|Deadline Reached| G[🔴 4b. Auto-Refund]
-    F --> H[✅ Grant Closed]
+    F --> H[✅ bounty Closed]
     G --> H
 ```
 
-1. **Create Grant** : Remunerate Open Source Projects and Contributors
+1. **Create bounty** : Remunerate Open Source Projects and Contributors
 ```solidity
-struct Grant {
+struct bounty {
     address payable funder;
     address token;  // USDC: 0xA0b8... 
     uint256 amount;
@@ -80,11 +80,11 @@ struct Grant {
 - 🔴 **Timeout**: Funder refund after deadline
 
 ### 👨‍💻 Developer Journey
-A **Developer** can work on available granted issues.
-The first valid merge claim the Grant 💸
+A **Developer** can work on available bountyed issues.
+The first valid merge claim the bounty 💸
 ```mermaid
 flowchart LR
-    A[👨‍💻 1 - Find Grant] --> R[🛡️ 2 - Link Git account and wallet using **vGrant**]
+    A[👨‍💻 1 - Find bounty] --> R[🛡️ 2 - Link Git account and wallet using **vbounty**]
     R --> B[3 - Submit PR with Solution]
     B --> C[4 - Maintainer Reviews]
     C --> D{5 - Approved?}
@@ -99,20 +99,20 @@ By using the **Web Proof** technology of **vlayer**, we ensure a **Git Account**
 
 We enables a fluid **User Experience** for a **Zero-Knowledge-Proof Verification** (ZK-proof), opposing **Cryptographical RSA challenge** using **Git SSH keys**, which may be challenging for casual user.
 
-To use **vGrant**, you should:
+To use **OpenBounty**, you should:
 - Install [**vlayer extension**](https://chromewebstore.google.com/detail/vlayer/jbchhcgphfokabmfacnkafoeeeppjmpl?pli=1) (Only for Chromium).
 - Install compatible wallet (e.g.: Metamask).
-- Follow step on [vGrant]() website.
+- Follow step on [OpenBounty]() website.
 
 ⚠️ It is recommended to take a look at [**Security Consideration**](https://book.vlayer.xyz/features/web.html#security-considerations) before using **Web Proof** technology.
 
 ```mermaid
 graph LR
-    A[Resolved Issue] --> B{Issuer registered on vGrant ?}
+    A[Resolved Issue] --> B{Issuer registered on vbounty ?}
     B -->|Valid Linked Git Account| C[💸 - Instant USDC Payout]
-    C --> L[✅ Grant Claimed]
+    C --> L[✅ bounty Claimed]
     B -->|Missing Account| D[🛑 - Claim Rejected]
-    D --> M[⚠️ Grant Pending - Alert Maintainers]
+    D --> M[⚠️ bounty Pending - Alert Maintainers]
 
 ```
 
@@ -129,7 +129,7 @@ graph LR
 | **Technical Focus** | Define problem → fund → wait      | Find issue → code → get paid      |
 
 
-### ✅ When **Grants** beat classic models: 
+### ✅ When **bounties** beat classic models: 
 - **Funder**: Pays only for results (no hourly fees/management)
 - **Developper**: Earns remuneration and reputation
 - **Blender**: Gets vetted code faster
@@ -187,8 +187,15 @@ graph LR
 
 ## Potential upgrade
 - Implement decentralized database for front-end caching (using **IPFS**)
-- Manage multiple concensus - **Fund on merge** / **Fund on merge and Approval** (Grant / Free-lance concensus)
+- Manage multiple concensus - **Fund on merge** / **Fund on merge and Approval** (Bounty / Free-lance concensus)
 - Add other Git service (Gitlab, ...)
 - Add developper portfolio
 - Priority ranking in Project
 - Add early bonus in the protocol
+
+- # Made by heart by :
+- - [Basile Fouquet](https://github.com/b3ww)
+  - [Sébastien Lucas](https://github.com/GodlyJaaaj)
+  - [Lucas Leclerc](https://github.com/Intermarch3)
+  - [Nathan Flattin](https://github.com/Nfire2103)
+  - [David Gozlan](https://github.com/Davphla)
