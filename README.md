@@ -193,9 +193,9 @@ graph LR
 - Priority ranking in Project
 - Add early bonus in the protocol
 
-- # Made by heart by :
-- - [Basile Fouquet](https://github.com/b3ww)
-  - [Sébastien Lucas](https://github.com/GodlyJaaaj)
-  - [Lucas Leclerc](https://github.com/Intermarch3)
-  - [Nathan Flattin](https://github.com/Nfire2103)
-  - [David Gozlan](https://github.com/Davphla)
+- # Made by ❤️ by:
+- [Basile Fouquet](https://github.com/b3ww)
+- [Sébastien Lucas](https://github.com/GodlyJaaaj)
+- [Lucas Leclerc](https://github.com/Intermarch3)
+- [Nathan Flattin](https://github.com/Nfire2103)
+- [David Gozlan](https://github.com/Davphla)
